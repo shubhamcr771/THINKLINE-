@@ -12,16 +12,17 @@
 <body>
     <%- include("header") %>
     <div class="container">
-        <h1>Edit Post</h1>
+        <h2 class="text-center text-info-emphasis fst-italic fw-bold mt-5">Edit The Post</h2>
+
         <!-- Form to edit the post -->
         <form method="POST" action="/edit-post">
             <div class="mb-3">
-                <label for="title" class="form-label">Title</label>
+                <label for="title" class="form-label fst-italic fw-bold">Title</label>
                 <input type="text" class="form-control" id="title" name="title" value="<%= title %>">
             </div>
             <div class="mb-3">
-                <label for="content" class="form-label">Content</label>
-                <textarea class="form-control" id="content" name="content" rows="5"><%= content %></textarea>
+                <label for="content" class="form-label fst-italic fw-bold">Content</label>
+                <textarea class="form-control" id="content" name="content" rows="10"><%= content %></textarea>
             </div>
             <button type="submit" class="btn btn-primary">Save Changes</button>
         </form>
