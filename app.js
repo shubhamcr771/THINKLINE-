@@ -14,8 +14,6 @@ app.use(bodyParser.urlencoded({extended: true}));
 
 // GET REQUEST 
 
-
-
 app.get("/", (req, res) => {
     res.render("home");
 });
@@ -38,8 +36,6 @@ app.get("/edit-post/:title/:content", (req, res) => {
 
 
 // POST REQUEST 
-
-
 
 app.post("/delete-post", (req, res) => {
     // Delete the post from the database
