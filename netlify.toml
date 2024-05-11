@@ -2,7 +2,7 @@
   external_node_modules = ["express"]
   node_bundler = "esbuild"
 [build]
-  publish = "public/app.js"
+  publish = "public"
   functions = "netlify/functions"
   command = "npm install"
 
