@@ -1,19 +1,23 @@
 import express from "express";
 import bodyParser from "body-parser";
+import { fileURLToPath } from 'url';
+import { dirname } from 'path';
+import path from "path";
 
 const port = 3000;
 const app = express();
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
 
 app.set("view engine", "ejs");
+app.set('views', path.join(__dirname, 'views'));
+
 
 app.use(bodyParser.urlencoded({ extended: true }));
 
 // GET REQUEST
 
 app.get("/", (req, res) => {
-  res.render("home");
-});
-app.get("/views/home.ejs", (req, res) => {
   res.render("home");
 });
 
@@ -47,6 +51,6 @@ app.post("/create-post", (req, res) => {
   res.render("view-post", { title, content });
 });
 
-app.listen(port, (req, res) => {
+app.listen(port, () => {
   console.log(`App is running on port: ${port}`);
 });
