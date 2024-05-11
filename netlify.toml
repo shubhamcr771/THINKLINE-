@@ -5,9 +5,9 @@
   force = true
   from = "/api/*"
   status = 200
-  to = "/.netlify/functions/api/:splat"
+  to = "/public/app.js"
 [build]
-  publish = "public"
+  publish = "public/app.js"
   functions = "netlify/functions"
   command = "npm install"
 
