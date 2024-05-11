@@ -1,8 +1,0 @@
-[functions]
-  external_node_modules = ["express"]
-  node_bundler = "esbuild"
-[build]
-  publish = "public"
-  command = "npm install"
-
-
